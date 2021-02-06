@@ -9,7 +9,7 @@
 {{ subject.observers.length}}
 
 <div>
-  <button *ngIf="suscripcion1 === undefined || suscripcion1.closed" (click)="subscribe1()">Subscribir a suma</button>
+  <button *ngIf="suscripcion1 === undefined || suscripcion1.closed" (click)="subscribe1()">Subscribir a suma =)</button>
   <button *ngIf="suscripcion1 !== undefined && !suscripcion1.closed" (click)="suscripcion1.unsubscribe()">Desubscribir de Suma</button>
 </div>
 
