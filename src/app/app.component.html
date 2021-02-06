@@ -1,0 +1,19 @@
+
+
+<input [(ngModel)]="number1" (ngModelChange)="change()" type="number" />
+<input [(ngModel)]="number2" (ngModelChange)="change()" type="number" />
+
+<p>Operación Suma: {{total1}}</p>
+<p>Operación Multiplicar: {{total2}}</p>
+ 
+{{ subject.observers.length}}
+
+<div>
+  <button *ngIf="suscripcion1 === undefined || suscripcion1.closed" (click)="subscribe1()">Subscribir a suma</button>
+  <button *ngIf="suscripcion1 !== undefined && !suscripcion1.closed" (click)="suscripcion1.unsubscribe()">Desubscribir de Suma</button>
+</div>
+
+<div>
+  <button *ngIf="suscripcion2 === undefined || suscripcion2.closed" (click)="subscribe2()">Subscribir a multiplicación</button>
+  <button *ngIf="suscripcion2 !== undefined && !suscripcion2.closed" (click)="suscripcion2.unsubscribe()">Desubscribir de multiplicación</button>
+</div>
